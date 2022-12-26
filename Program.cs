@@ -9,21 +9,23 @@
 using System.Linq;
 string[] FillArray(string text)
 {
-    if (text == "") return new string[] {""};
+    if (text == "") return new string[] { "" };
     else
-    {    
-    string[] textArray = text.Split(" ")
-                            .ToArray();
-    return textArray;
+    {
+        string[] textArray = text.Split(" ")
+                                .ToArray();
+        return textArray;
     }
 }
 
-void PrintArray(string[] array)
+void PrintFindElArray(string[] array)
 {
     foreach (string el in array)
-    { 
-        Console.Write($"{el} ");
-        if (array.Length == 0) Console.Write("Проверьте правильность ввода данных");
-   }
+    {
+        if (el.Length == 0) Console.Write("Вы ввели пустую строку");
+        if (el.Length <= 3) Console.Write($"{el} ");
+    }
     Console.WriteLine();
 }
+
+
