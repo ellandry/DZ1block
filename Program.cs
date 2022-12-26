@@ -18,3 +18,12 @@ string[] FillArray(string text)
     }
 }
 
+void PrintArray(string[] array)
+{
+    foreach (string el in array)
+    { 
+        Console.Write($"{el} ");
+        if (array.Length == 0) Console.Write("Проверьте правильность ввода данных");
+   }
+    Console.WriteLine();
+}
