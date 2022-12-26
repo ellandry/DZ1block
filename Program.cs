@@ -28,4 +28,23 @@ void PrintFindElArray(string[] array)
     Console.WriteLine();
 }
 
+try
+{
+    Console.WriteLine("Введите через пробел любое количество слов или символов:  ");
+
+    string text = Console.ReadLine();
+
+    string[] textArray = FillArray(text);
+    Console.WriteLine();
+    Console.Write($"Текстом, длина которого меньше или равна 3 символам, является: ");
+    Console.WriteLine();
+    PrintFindElArray(textArray);
+    Console.WriteLine();
+}
+
+catch
+{
+    Console.WriteLine("Проверьте правильность ввода данных");
+    Console.WriteLine();
+}
 
